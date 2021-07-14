@@ -1,0 +1,195 @@
+body {
+    min-height: 500vh;
+}
+header h1 {
+    text-align: center;
+    font-family: "Quicksand-Medium";
+    font-size: 55px;
+}
+section main .container {
+    margin: auto;
+    display: grid;
+    justify-items: center;
+}
+section main .container p {
+    font-family: "Quicksand-Medium";
+    text-align: center;
+}
+section main .container .timeline-right {
+    display: grid;
+    justify-items: right;
+    align-items: end;
+    width: 60%;
+    height: 350px;
+    /*background-color: blanchedalmond;*/
+    position: relative;
+    opacity: 0;
+}
+section main .container .timeline-right .line,
+section main .container .timeline-left .line {
+    border-left: 6px solid #fbaa22;
+    height: 350px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*z-index: -1;*/
+}
+section main .container .timeline-right .circle,
+section main .container .timeline-left .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #a16a0c;
+    border-radius: 50%;
+    position: absolute;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*z-index: 1;*/
+}
+section main .container .timeline-right .timeline-text {
+    width: 50%;
+    min-height: 150px;
+    background-color: rgb(254,192,6);
+    transform: translate(15%,50%);
+    display: grid;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    bottom: 3%;
+}
+section main .container .timeline-right .timeline-text .triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-right: 25px solid rgb(254,192,6);
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    margin-top: -25px;
+    z-index: -1;
+}
+section main .container .timeline-left {
+    display: grid;
+    justify-items: left;
+    align-items: end;
+    width: 60%;
+    height: 350px;
+    /*background-color: blanchedalmond;*/
+    position: relative;
+    opacity: 0;
+}
+section main .container .timeline-left .timeline-text {
+    width: 50%;
+    min-height: 150px;
+    background-color: rgb(254,192,6);
+    display: grid;
+    justify-items: right;
+    align-items: center;
+    z-index: 1;
+    transform: translate(-15%,50%);
+    position: absolute;
+    bottom: 3%;
+}
+section main .container .timeline-right .timeline-text .d,
+section main .container .timeline-left .timeline-text .d
+{
+    width: 100%;
+}
+section main .container .timeline-right .timeline-text .text,
+section main .container .timeline-left .timeline-text .text{
+    width: 100%;
+}
+section main .container .timeline-left .timeline-text .triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 25px solid rgb(254,192,6);
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    margin-top: -25px;
+    z-index: -1;
+}
+.add {
+    animation: animation 2s forwards;
+}
+
+.text .p {
+    font-size: 12px;
+}
+
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+@font-face {
+    font-family: "Quicksand-Medium";
+    src: url("Quicksand-Medium.ttf");
+}
+
+
+
+
+
+
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    section main .container .timeline-right,
+    section main .container .timeline-left {
+        width: 99%;
+    }
+    section main .container .timeline-left .timeline-text,
+    section main .container .timeline-right .timeline-text
+    {
+        width: 35%;
+    }
+    section main .container .timeline-right .timeline-text {
+        transform: translate(-10%,50%);
+    }
+    section main .container .timeline-left .timeline-text {
+        transform: translate(10%,50%);
+    }
+
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    section main .container .timeline-right,
+    section main .container .timeline-left {
+        width: 87%;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    section main .container .timeline-right,
+    section main .container .timeline-left{
+        width: 75%;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
